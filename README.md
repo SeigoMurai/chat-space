@@ -11,12 +11,11 @@
 - has_many :groups, through:  :users_groups
 - has_many :messages
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 |memmber|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :users, through:  :users_groups
 - has_many :messages
