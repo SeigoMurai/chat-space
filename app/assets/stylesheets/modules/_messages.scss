@@ -12,19 +12,19 @@
     height: 100px;
     width: 300px;
     background-color: #253141;
-    display: flex;
+    display: $maindisplay;
     justify-content: center;
     align-items: center;
 
     &-box{
       height: 20px;
       width: 260px;
-      display: flex;
+      display: $maindisplay;
       justify-content: space-between;
 
       &__user-name{
         line-height: 20px;
-        font-weight: bold;
+        font-weight: $mainfontweight;
         color: $mainwhiteColor;
         font-size: 16px;
       }
@@ -33,7 +33,7 @@
         width: 60px;
         line-height: 20px;
         color: $mainwhiteColor;
-        display: flex;
+        display: $maindisplay;
         justify-content: flex-end;
 
         .edit{
@@ -60,14 +60,14 @@
 
     &-name{
       font-size: 15px;
-      font-weight: bold;
+      font-weight: $mainfontweight;
       color: $mainwhiteColor;
       padding-bottom: 5px;
     }
 
     &__recent-messages{
       font-size: 11px;
-      font-weight: bold;
+      font-weight: $mainfontweight;
       color: $mainwhiteColor;
     }
   }
@@ -87,19 +87,19 @@
     padding: 0 40px;
     color: $mainwhiteColor;
     float: right;
-    display: flex;
+    display: $maindisplay;
     justify-content: space-between;
 
     &__left-box{
       padding-top: 35px;
       &__recent-group{
-        color: #333333;
+        color: $mainblackColor;
         font-size: 20px;
       }
 
       &__member-list{
-        color: #999999;
-        display: flex;
+        color: $subgrayColor;
+        display: $maindisplay;
         font-size: 12px;
         padding-top: 15px;
       }
@@ -131,25 +131,25 @@
   padding-left: 40px;
 
   &__details{
-    display: flex;
+    display: $maindisplay;
     padding-bottom: 12px;
 
     &-name{
       font-size: 16px;
-      font-weight: bold;
-      color: #333333;
+      font-weight: $mainfontweight;
+      color: $mainblackColor;
       padding-right: 5px;
     }
 
     &-date{
-      color: #999999;
+      color: $subgrayColor;
       font-size: 12px;
     }
   }
 
   &__details__content{
     font-size: 14px;
-    color: #434A54;
+    color: $maingrayColor;
     padding-bottom: 46px;
   }
 }
@@ -160,16 +160,16 @@
   padding: 20px 40px;
 
   .new__message{
-    display: flex;
+    display: $maindisplay;
     justify-content: space-between;
     .input-box{
-      display: flex;
+      display: $maindisplay;
       position: relative;
 
       &__text{
         width: calc(100vw - 490px);
         height: 50px;
-        color: #434a54;
+        color: $maingrayColor;
         padding: 0 40px 0 10px;
         border-style: none;
       }
@@ -179,6 +179,7 @@
         top: 10px;
         right: 10px;
         font-size: 22px;
+        color: black;
         &__file{
           display: none;
         }
