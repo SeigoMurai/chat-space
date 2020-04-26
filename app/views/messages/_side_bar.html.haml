@@ -1,0 +1,17 @@
+.side-bar 
+  .side-bar__header 
+    .side-bar__header-box
+      %p.side-bar__header-box__user-name 
+        seigo
+      %ul.side-bar__header-box__icon 
+        %li.side-bar__header-box__icon-edit
+        = link_to '#', class:"edit" do
+          = icon("far", "edit")
+        %li.side-bar__header-box__icon-cog
+        = link_to '#', class:"cog" do
+          = icon("fas", "cog")
+  .groups
+    .groups__group
+      .groups__group-name techcamp
+      .groups__group__recent-messages まだメッセージはありません
+

@@ -1,0 +1,35 @@
+.main-chat 
+  .main-chat__header
+    .main-chat__header__left-box
+      %h2.main-chat__header__left-box__recent-group
+        test
+      %ul.main-chat__header__left-box__member-list
+        Member:
+        %li.main-chat__header__left-box__member-list__member
+          murai
+    .main-chat__header__right-box
+      = link_to '#', class:"Edit-btn" do
+        Edit
+  .messages
+    .messages__details
+      .messages__details-name
+        seigo
+      .messages__details-date
+        2020/08/22(Wed) 18:00
+    .messages__details__content
+      こんばんは！
+    .messages__details
+      .messages__details-name
+        taka
+      .messages__details-date
+        2020/08/22(Wed) 18:05
+    .messages__details__content
+      久しぶりです！
+  .form
+    %form.new__message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          =icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
