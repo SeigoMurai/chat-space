@@ -2,14 +2,14 @@
   .side-bar__header 
     .side-bar__header-box
       %p.side-bar__header-box__user-name 
-        seigo
+        = current_user.name
       %ul.side-bar__header-box__icon 
         %li.side-bar__header-box__icon-edit
         = link_to '#', class:"edit" do
           = icon("far", "edit")
         %li.side-bar__header-box__icon-cog
-        = link_to '#', class:"cog" do
-          = icon("fas", "cog")
+        = link_to edit_user_path(current_user) do
+          = icon("fas", "cog", class: "cog")
   .groups
     .groups__group
       .groups__group-name techcamp
