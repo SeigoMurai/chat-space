@@ -15,6 +15,7 @@
     display: $maindisplay;
     justify-content: center;
     align-items: center;
+    position: fixed;
 
     &-box{
       height: 20px;
@@ -54,8 +55,9 @@
  
 
 .groups{
-
-  &__group{
+  overflow: scroll;
+  background-color: #2f3e51;
+  .group{
     padding: 20px 20px 40px;
 
     &-name{
@@ -63,6 +65,7 @@
       font-weight: $mainfontweight;
       color: $mainwhiteColor;
       padding-bottom: 5px;
+      
     }
 
     &__recent-messages{
@@ -73,7 +76,10 @@
   }
 }
 
-
+.group-name{
+  text-decoration: none;
+  color: $mainwhiteColor;
+}
 
 .main-chat{
   height: 100vh;
@@ -89,6 +95,7 @@
     float: right;
     display: $maindisplay;
     justify-content: space-between;
+    position: fixed;
 
     &__left-box{
       padding-top: 35px;
@@ -101,7 +108,6 @@
         color: $subgrayColor;
         display: $maindisplay;
         font-size: 12px;
-        padding-top: 15px;
       }
     }
     &__right-box{
@@ -122,6 +128,39 @@
 
 
 
+// .messages{
+//   height: calc(100vh - 190px);
+//   width: calc(100vw - 300px);
+//   background-color: #fafafa;
+//   margin-top: 100px;
+//   padding-top: 35px;
+//   padding-left: 40px;
+//   color: $mainblackColor;
+
+//   &__details{
+//     display: $maindisplay;
+//     padding-bottom: 12px;
+
+//     &-name{
+//       font-size: 16px;
+//       font-weight: $mainfontweight;
+//       color: $mainblackColor;
+//       padding-right: 5px;
+//     }
+
+//     &-date{
+//       color: $subgrayColor;
+//       font-size: 12px;
+//     }
+//   }
+
+//   &__details__content{
+//     font-size: 14px;
+//     color: $maingrayColor;
+//     padding-bottom: 46px;
+//   }
+// }
+
 .messages{
   height: calc(100vh - 190px);
   width: calc(100vw - 300px);
@@ -129,35 +168,38 @@
   margin-top: 100px;
   padding-top: 35px;
   padding-left: 40px;
+  color: $mainblackColor;
+  overflow: scroll;
 
-  &__details{
-    display: $maindisplay;
+  .upper-message{
+  display: $maindisplay;
     padding-bottom: 12px;
 
-    &-name{
+
+    &__user-name{
       font-size: 16px;
       font-weight: $mainfontweight;
       color: $mainblackColor;
       padding-right: 5px;
     }
 
-    &-date{
+    &__date{
       color: $subgrayColor;
       font-size: 12px;
     }
   }
-
-  &__details__content{
+  .lower-message__content{
     font-size: 14px;
     color: $maingrayColor;
     padding-bottom: 46px;
   }
-}
 
+}
 .form{
   height: 90px;
   background-color: #d2d2d2;
   padding: 20px 40px;
+  position: fixed;
 
   .new__message{
     display: $maindisplay;
@@ -173,11 +215,11 @@
         padding: 0 40px 0 10px;
         border-style: none;
       }
+      
 
+      
       &__image{
-        position: absolute;
-        top: 10px;
-        right: 10px;
+        position: relative;
         font-size: 22px;
         color: black;
         &__file{
@@ -194,6 +236,11 @@
       text-align: center;
       color: $mainwhiteColor;
     }
+  }
+  .fas{
+    position: absolute;
+    top: 15px;
+    right: 10px;
   }
 }
 
