@@ -42,7 +42,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
-  gem 'jquery-rails'
 end
 
 group :development do
@@ -63,6 +62,8 @@ gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
+gem 'jquery-rails'
+
 
 group :production do
   gem 'unicorn', '5.4.1'
