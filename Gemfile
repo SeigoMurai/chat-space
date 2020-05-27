@@ -68,6 +68,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
 gem 'jquery-rails'
+gem 'fog-aws'
 
 
 group :production do
